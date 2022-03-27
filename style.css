@@ -1,12 +1,11 @@
 body {
   background-image: url("achtergrond.jpg");
   background-size: cover;
-  font-family: "Architects Daughter";
   font-weight: bold;
 }
 
 h1 {
-  color: White;
+  color: white;
   text-align: center;
   font-size: 30px;
 }
