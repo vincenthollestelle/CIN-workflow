@@ -1,5 +1,4 @@
-
-name: Super-Linter
+name: Lint Code Base
 
 on: push
 
@@ -8,11 +7,14 @@ jobs:
     name: Lint code base
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-      - name: Run Super-Linter
-        uses: github/super-linter@v3
+      - name: Lint Code Base
+        uses: github/super-linter@v4
         env:
+          VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
